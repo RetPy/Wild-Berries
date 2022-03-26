@@ -20,7 +20,6 @@ class ProductCreateView(generics.CreateAPIView):
 
     model = Product
     serializer_class = ProductSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class ProductUpdateView(generics.UpdateAPIView):
@@ -28,11 +27,9 @@ class ProductUpdateView(generics.UpdateAPIView):
     model = Product
     queryset = Product.objects
     serializer_class = ProductSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class ProductDeleteView(generics.DestroyAPIView):
 
     model = Product
     queryset = Product.objects
-    permission_classes = [IsAuthenticatedOrReadOnly]
